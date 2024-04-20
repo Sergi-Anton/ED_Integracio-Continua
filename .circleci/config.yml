@@ -2,23 +2,15 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:14  # Utiliza una imagen de Node.js 14
-
-    working_directory: ~/project  # Cambia el directorio de trabajo a uno predeterminado
-
+      - image: circleci/node:14
+    working_directory: /home/circleci/project
     steps:
-      - checkout  # Clona el código del repositorio
-
+      - checkout
       - run:
           name: Install dependencies
-          command: npm install  # Instala las dependencias del proyecto
-
+          command: npm install
       - run:
           name: Run tests
-          command: npm test  # Ejecuta los tests del proyecto
-
-      - run:
-    name: List directory contents
-    command: ls -la /home/circleci/project/
+          command: npm test
 
 
