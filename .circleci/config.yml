@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/node:14  # Utiliza una imagen de Node.js 14
 
-    working_directory: /main/circleci/project  # Cambia el directorio de trabajo a uno predeterminado
+    working_directory: ~/project  # Cambia el directorio de trabajo a uno predeterminado
 
     steps:
       - checkout  # Clona el código del repositorio
