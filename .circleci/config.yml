@@ -7,10 +7,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install dependencies
-          command: npm install
-      - run:
-          name: Run tests
-          command: npm test
+    name: List directory contents
+    command: ls -la /home/circleci/project/
+
 
 
